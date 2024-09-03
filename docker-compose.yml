@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8083"
+    env_file:
+      - .env
+
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:8091/jwtsecurity
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: kamal2002
+#      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+#      JWT_SECRET: 54d7c2f69729950313fa05de3b9c2fb8aae68a7fe64d6756deecd7c5e7e6224b
+#      REDIS_HOST: redis-15883.c305.ap-south-1-1.ec2.redns.redis-cloud.com
+#      REDIS_PORT: 15883
+#      REDIS_PASSWORD: V8Kq0t3ywWUFsY3IlJAPiLtiOs4OIDjk
